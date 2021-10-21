@@ -1,4 +1,3 @@
-
 # call after successfully login:
 
 from os import name
@@ -164,8 +163,21 @@ def notAppliedJob():
     print("not applied jobs:")
 
 def jobApplication():
- jobFile = open("jobs.txt",'r')
- jobList = []
+
+    print("----------JOB APPLICATION----------")
+    g = input("Enter your graduation date Ex:(mm/dd/yyyy): ")
+    s = input("Enter the day you can start Ex:(mm/dd/yyyy): ")
+    d = input("Describe why you feel fit for the job: ")
+    
+    saveJobApp(g, s, d)
+    
+
+def saveJobApp(g, s, d):
+    file5 = open("appliedJobs.txt", "a")
+    file5.write(g + "\t" + s + "\t" + d + "\n" )
+    file5.close()
+
+
 
 
 def jobSearchPage():
@@ -200,7 +212,7 @@ def jobSearchPage():
     #Just a start Ill come back in a few
     while(j!=1):
         selection = input("Type the name of the job that you would like to apply for (Case Sensitive): ")
-        if (selection == jobList):
+        if (selection == t):
             jobApplication()
             j=1
         
