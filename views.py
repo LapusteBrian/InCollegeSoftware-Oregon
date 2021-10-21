@@ -162,19 +162,19 @@ def appliedJob():
 def notAppliedJob():
     print("not applied jobs:")
 
-def jobApplication():
+def jobApplication(title):
 
     print("----------JOB APPLICATION----------")
     g = input("Enter your graduation date Ex:(mm/dd/yyyy): ")
     s = input("Enter the day you can start Ex:(mm/dd/yyyy): ")
     d = input("Describe why you feel fit for the job: ")
     
-    saveJobApp(g, s, d)
+    saveJobApp(title, g, s, d)
     
 
-def saveJobApp(g, s, d):
+def saveJobApp(title, g, s, d):
     file5 = open("appliedJobs.txt", "a")
-    file5.write(g + "\t" + s + "\t" + d + "\n" )
+    file5.write(title + "\t" + g + "\t" + s + "\t" + d + "\n" )
     file5.close()
 
 
@@ -213,7 +213,7 @@ def jobSearchPage():
     while(j!=1):
         selection = input("Type the name of the job that you would like to apply for (Case Sensitive): ")
         if (selection == t):
-            jobApplication()
+            jobApplication(t)
             j=1
         
             
