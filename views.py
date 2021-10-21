@@ -163,6 +163,10 @@ def appliedJob():
 def notAppliedJob():
     print("not applied jobs:")
 
+def jobApplication():
+ jobFile = open("jobs.txt",'r')
+ jobList = []
+
 
 def jobSearchPage():
     print("\n")
@@ -179,9 +183,7 @@ def jobSearchPage():
             n, t, d, e, l, s = line.split('\t')
             jobList.append(t)
 
-
     #jobList = set(jobList)
-
     '''
     jobOptionInput = input("Enter 'a' to see list of applied jobs or 'n' for list of jobs that you have not applied: ")
     
@@ -193,10 +195,16 @@ def jobSearchPage():
 
     
     print(*jobList, sep="\t")
-    print("------------")
-
-
-    
+    print("------------------------------------------------------------")
+    j=0
+    #Just a start Ill come back in a few
+    while(j!=1):
+        selection = input("Type the name of the job that you would like to apply for (Case Sensitive): ")
+        if (selection == jobList):
+            jobApplication()
+            j=1
+        
+            
 
     
     while (a != "0" and a != "1"):

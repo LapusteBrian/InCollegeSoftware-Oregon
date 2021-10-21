@@ -1,2 +1,1 @@
-Student Learner	t	M 	U 	a
-Student2 Learner2	T	M 	U 	A
+Student2 Learner2	title	Major 	University 	about me
